@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28D2202B-3D7B-48E1-83A2-359B76AED8F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aton.Core</RootNamespace>
+    <AssemblyName>Aton.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Aton.Bin\Library\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\Aton.Bin\Library\Release\Aton.Core.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AtonConstant.cs" />
+    <Compile Include="AtonProviderContainer.cs" />
+    <Compile Include="BaseTypes\BaseBusiness.cs" />
+    <Compile Include="BaseTypes\BaseItem.cs" />
+    <Compile Include="BaseTypes\BaseResult.cs" />
+    <Compile Include="Components\IComponentProvider.cs" />
+    <Compile Include="Config\ConfigMapNameAttribute.cs" />
+    <Compile Include="Config\IConfiguration.cs" />
+    <Compile Include="Config\IConfigurationProvider.cs" />
+    <Compile Include="Data\Parameter.cs" />
+    <Compile Include="Devenv\IDevenvHandler.cs" />
+    <Compile Include="Devenv\SdkMessageScheme.cs" />
+    <Compile Include="IO\IOProvider.cs" />
+    <Compile Include="IProviderLoader.cs" />
+    <Compile Include="Config\ProviderConfigHandler\AtonProviderCollection.cs" />
+    <Compile Include="Config\ProviderConfigHandler\AtonProviderConfiguration.cs" />
+    <Compile Include="Config\ProviderConfigHandler\AtonProviderElement.cs" />
+    <Compile Include="Config\ProviderConfigHandler\AtonProviderHandler.cs" />
+    <Compile Include="Config\ProviderConfigHandler\AtonProviderMode.cs" />
+    <Compile Include="Loader\ProviderLoader.cs" />
+    <Compile Include="Config\ServiceConfigHandler\AtonServiceConfigHandler.cs" />
+    <Compile Include="Config\ServiceConfigHandler\AtonServiceCollection.cs" />
+    <Compile Include="Config\ServiceConfigHandler\AtonServiceSummary.cs" />
+    <Compile Include="Config\ServiceConfigHandler\AtonServiceElement.cs" />
+    <Compile Include="Config\ServiceConfigHandler\AtonServiceConfiguration.cs" />
+    <Compile Include="Loader\ServiceLoader.cs" />
+    <Compile Include="Data\IParameterProvider.cs" />
+    <Compile Include="Data\PagedParam.cs" />
+    <Compile Include="Data\PagedResult.cs" />
+    <Compile Include="Devenv\SdkMessage.cs" />
+    <Compile Include="Devenv\ISdkModule.cs" />
+    <Compile Include="IComProvider.cs" />
+    <Compile Include="Logger\AtonLogEntity.cs" />
+    <Compile Include="Logger\IAtonLogProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IAtonService.cs" />
+    <Compile Include="Properties\ShareAssemblyInfo.cs" />
+    <Compile Include="Properties\ShareAssemblyVersionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\ProviderConfigHandler\Sample.config" />
+    <None Include="Config\ServiceConfigHandler\Sample.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
